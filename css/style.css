@@ -42,11 +42,20 @@ header a{
 
 
 /* footer */
+.credits{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .credits a{
     font-weight: bold;
+    margin-left: 0.3rem;
 }
 
 .disclaimer{
     font-style: italic;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

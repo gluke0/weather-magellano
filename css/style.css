@@ -71,6 +71,16 @@ header a{
 } 
 
 /* section */
+.section-data{
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+#datatoday{
+    font-style: italic;
+}
+
 .section-settings{
     height: calc(100vh - 200px);
     display: flex;

@@ -39,3 +39,14 @@ header a{
     font-weight: bold;
     text-transform: uppercase;
 } 
+
+
+/* footer */
+
+.credits a{
+    font-weight: bold;
+}
+
+.disclaimer{
+    font-style: italic;
+}

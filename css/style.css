@@ -16,3 +16,12 @@ body{
     border: 1px red solid;
     margin: auto;
 }
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    width: 20%;
+}

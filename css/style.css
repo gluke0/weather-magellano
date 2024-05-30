@@ -74,7 +74,8 @@ header a{
 .section-data{
     display: flex;
     justify-content: end;
-    margin-top: 1rem;
+    margin-top: 20px;
+    height: 20px;
 }
 
 #datatoday{
@@ -82,7 +83,7 @@ header a{
 }
 
 .section-settings{
-    height: calc(100vh - 200px);
+    height: calc(100vh - 240px);
     display: flex;
     justify-content: center;
     align-items: end;
@@ -96,8 +97,8 @@ header a{
     font-size: x-large;
     padding: 5rem 0;
     border-radius: 0.8rem;
-    transition: background-color 1s ease;
-    animation: background-change 5s infinite;
+    transition: font-size 0.1s ease;
+    animation: font-size-change 5s infinite;
 }
 
 .settings-button{
@@ -130,17 +131,20 @@ footer{
 }
 
 /* animation */
-@keyframes background-change{
+@keyframes font-size-change{
     0%{
-        background-color: #beb5b5;
+        font-size: 0.8rem;
+    }
+    25%{
+        font-size: 1rem;
     }
     50%{
-        background-color: #968e8e;
+        font-size: 1.2rem;
     }
     75%{
-        background-color: #908d8d;
+        font-size: 1rem;
     }
     100%{
-        background-color: #beb5b5;
+        font-size: 0.8rem;
     }
 }

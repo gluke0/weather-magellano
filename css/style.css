@@ -43,6 +43,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
 }
 
 .logo img{
@@ -57,8 +58,7 @@ header a{
 
 /* section */
 .section-settings{
-    min-height: 250px;
-    border: 1px solid green;
+   height: calc(100vh - 200px);
     display: flex;
     justify-content: center;
     align-items: end;
@@ -69,6 +69,12 @@ header a{
 }
 
 /* footer */
+footer{
+    height: 100px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 .credits{
     width: 100%;
     display: flex;

@@ -37,7 +37,7 @@ body{
     height: 100vh;
     margin: auto;
     padding: 0 1.5rem 1.5rem 1.5rem;
-    background-color: rgb(186, 184, 184);
+    background-color: #bab8b8;
 }
 
 /* header */
@@ -83,6 +83,11 @@ header a{
     width: 100%;
     display: flex;
     justify-content: center;
+    font-size: x-large;
+    padding: 5rem 0;
+    border-radius: 0.8rem;
+    transition: background-color 1s ease;
+    animation: background-change 5s infinite;
 }
 
 .settings-button{
@@ -112,4 +117,20 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+/* animation */
+@keyframes background-change{
+    0%{
+        background-color: #beb5b5;
+    }
+    50%{
+        background-color: #968e8e;
+    }
+    75%{
+        background-color: #908d8d;
+    }
+    100%{
+        background-color: #beb5b5;
+    }
 }

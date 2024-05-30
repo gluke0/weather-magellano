@@ -44,6 +44,13 @@ header a{
 .section-settings{
     min-height: 250px;
     border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.settings-button{
+    margin-bottom: 1.5rem;
 }
 
 /* footer */

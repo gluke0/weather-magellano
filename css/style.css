@@ -72,10 +72,17 @@ header a{
 
 /* section */
 .section-settings{
-   height: calc(100vh - 200px);
+    height: calc(100vh - 200px);
     display: flex;
     justify-content: center;
     align-items: end;
+    flex-wrap: wrap;
+}
+
+.settings-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .settings-button{

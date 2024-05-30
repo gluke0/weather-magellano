@@ -1,8 +1,14 @@
+/* general */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     background-color: gray;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 body{
@@ -17,6 +23,7 @@ body{
     margin: auto;
 }
 
+/* header */
 header{
     display: flex;
     justify-content: center;
@@ -26,3 +33,9 @@ header{
 .logo img{
     width: 20%;
 }
+
+header a{
+    margin-left: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+} 

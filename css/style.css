@@ -11,6 +11,15 @@ a{
     color: black;
 }
 
+button{
+    border: none;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 body{
     width: 1200px;
     margin: auto;

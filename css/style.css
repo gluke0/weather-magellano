@@ -41,7 +41,7 @@ header a{
 } 
 
 /* section */
-.section1{
+.section-settings{
     min-height: 250px;
     border: 1px solid green;
 }

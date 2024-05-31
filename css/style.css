@@ -34,10 +34,11 @@ body{
 
 .container{
     width: 80%;
-    min-height: 100vh;
+    height: 100vh;
     margin: auto;
     padding: 1rem 2.5rem 2.5rem 2.5rem;
     background-color: #bab8b8;
+    position: relative;
 }
 
 /* header */
@@ -77,6 +78,7 @@ header a{
     justify-content: flex-end;
     margin-top: 20px;
     height: 20px;
+    margin-right: 1.5rem;
 }
 
 #datatoday{
@@ -110,13 +112,15 @@ header a{
 footer {
     height: 100px;
     padding-bottom: 2rem;
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    text-align: center;
 }
 
 .credits {
     width: 100%;
-    display: flex;
-    justify-content: center;
-}
+} 
 
 .credits a {
     font-weight: bold;
@@ -126,8 +130,6 @@ footer {
 .disclaimer {
     font-style: italic;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 /* animation */
@@ -221,10 +223,10 @@ footer {
         font-size: large;
     }
 
-    footer{
+    /* footer{
         flex-direction: column;
         align-items: center;
         padding-top: 1rem;
         padding-bottom: 1rem;
-    }
+    } */
 }

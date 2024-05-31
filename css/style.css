@@ -2,7 +2,7 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0; 
+    margin: 0;
 }
 
 a{
@@ -26,7 +26,7 @@ button:hover{
 }
 
 body{
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     background-color: rgb(210, 207, 207);
     font-family: "Roboto", sans-serif;
@@ -34,7 +34,7 @@ body{
 
 .container{
     width: 80%;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
     padding: 0 1.5rem 1.5rem 1.5rem;
     background-color: #bab8b8;
@@ -43,37 +43,38 @@ body{
 /* header */
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100px;
+    padding: 0 1.5rem;
 }
 
 .logo{
-    width: 100%;
-    padding-left: 3rem;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
 }
 
 .menu{
-    width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
 }
 
 .logo img{
-    width: 22%;
-
+    width: 150px;
 }
 
 header a{
     font-weight: bold;
     text-transform: uppercase;
     font-size: larger;
-} 
+}
 
 /* section */
 .section-data{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 20px;
     height: 20px;
 }
@@ -83,10 +84,10 @@ header a{
 }
 
 .section-settings{
-    height: calc(100vh - 240px);
+    min-height: calc(100vh - 240px);
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -101,29 +102,29 @@ header a{
     animation: font-size-change 5s infinite;
 }
 
-.settings-button{
+.settings-button {
     margin-bottom: 1.5rem;
 }
 
 /* footer */
-footer{
+footer {
     height: 100px;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-.credits{
+.credits {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.credits a{
+.credits a {
     font-weight: bold;
     margin-left: 0.3rem;
 }
 
-.disclaimer{
+.disclaimer {
     font-style: italic;
     width: 100%;
     display: flex;
@@ -149,4 +150,67 @@ footer{
     }
 }
 
-/* media query */
+/* media queries */
+@media (max-width: 1024px){
+    .container{
+        width: 90%;
+    }
+
+    .logo img{
+        width: 120px;
+    }
+
+    .settings-content{
+        padding: 2rem 0;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .logo{
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .menu{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    header{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .settings-content{
+        padding: 1rem 0;
+        font-size: large;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}

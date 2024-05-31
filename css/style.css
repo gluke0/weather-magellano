@@ -38,7 +38,6 @@ body{
     margin: auto;
     padding: 1rem 2.5rem 2.5rem 2.5rem;
     background-color: #bab8b8;
-    position: relative;
 }
 
 /* header */
@@ -98,28 +97,26 @@ header a{
     display: flex;
     justify-content: center;
     font-size: x-large;
-    padding: 5rem 0;
+    padding: 10rem 0;
     border-radius: 0.8rem;
-    transition: font-size 0.1s ease;
-    animation: font-size-change 5s infinite;
+    /* transition: font-size 0.1s ease;
+    animation: font-size-change 5s infinite; */
 }
 
 .settings-button {
-    margin-bottom: 1.5rem;
+    margin-bottom: 5rem;
 }
 
 /* footer */
 footer {
     height: 100px;
-    padding-bottom: 2rem;
-    position: absolute;
-    bottom: 0;
-    width: 80%;
-    text-align: center;
+    padding-bottom: 1.5rem;  
 }
 
 .credits {
     width: 100%;
+    display: flex;
+    justify-content: center;
 } 
 
 .credits a {
@@ -129,10 +126,11 @@ footer {
 
 .disclaimer {
     font-style: italic;
-    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-/* animation */
+/* animation
 @keyframes font-size-change{
     0%{
         font-size: 0.8rem;
@@ -149,7 +147,7 @@ footer {
     100%{
         font-size: 0.8rem;
     }
-}
+} */
 
 /* media queries */
 @media (max-width: 1024px){

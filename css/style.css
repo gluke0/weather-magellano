@@ -84,6 +84,11 @@ header a{
     font-style: italic;
 }
 
+.content-dashboard{
+    height: 300px;
+    border: 1px solid red;    
+}
+
 .section-settings{
     height: fit-content;
     display: flex;

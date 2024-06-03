@@ -28,8 +28,15 @@ fetch(url)
   .then(data =>{
     let temp = data.main.temp;
     let weather = data.weather[0].description;
+    // keeping console log
     console.log(`The temperature in ${city}, is ${temp}°C`);
     console.log(`The weather conditions are: ${weather}`);
+
+    // print in the html
+    let content = document.getElementById('content-dashboard');
+    content.innerHTML= 
+        `<div> The temperature in ${city} is ${temp}°C </div>
+        <div>The wwather conditions are: ${weather}</div>`
   })
   .catch(error=>{
     console.error('There was a problem fetching:', error);

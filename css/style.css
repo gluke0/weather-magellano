@@ -84,7 +84,7 @@ header a{
     font-style: italic;
 }
 
-.content-dashboard{
+#content-dashboard{
     height: 300px;
     border: 1px solid red;    
 }

@@ -96,6 +96,11 @@ header a{
 
 }
 
+.city, .temp, .weather{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
 .section-settings{
     height: fit-content;
     display: flex;

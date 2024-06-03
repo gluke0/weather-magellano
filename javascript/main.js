@@ -11,3 +11,26 @@ let datatoday = new Date()
         let result = document.getElementById('datatoday');
         result.innerHTML = `${format}`;
         
+
+// weather api
+let key = '642e9d3043cd3d3bbd5061193d8d82c2';
+let city = 'Lodi';
+let country = 'IT';
+let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+
+fetch(url)
+  .then(response=>{
+    if(!response.ok){
+      throw new Error('An error ocurred ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(data =>{
+    let temp = data.main.temp;
+    let weather = data.weather[0].description;
+    console.log(`The temperature in ${city}, is ${temp}°C`);
+    console.log(`The weather conditions are: ${weather}`);
+  })
+  .catch(error=>{
+    console.error('There was a problem fetching:', error);
+  });

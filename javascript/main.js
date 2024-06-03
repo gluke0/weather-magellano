@@ -26,7 +26,7 @@ fetch(url)
     return response.json();
   })
   .then(data =>{
-    let temp = data.main.temp;
+    let temp = data.main.temp.toFixed(1);
     let weather = data.weather[0].description;
     // keeping console log
     console.log(`The temperature in ${city}, is ${temp}°C`);

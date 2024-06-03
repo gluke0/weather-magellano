@@ -84,9 +84,16 @@ header a{
     font-style: italic;
 }
 
-#content-dashboard{
+#section-dashboard{
     height: 300px;
     border: 1px solid red;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content-dashboard{
+
 }
 
 .section-settings{

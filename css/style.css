@@ -92,6 +92,7 @@ header a{
 }
 
 #content-dashboard{
+    text-align: center;
 
 }
 
@@ -127,6 +128,7 @@ header a{
 footer {
     height: 100px;
     padding-bottom: 1.5rem;  
+    text-align: center;
 }
 
 .credits {

@@ -36,7 +36,7 @@ fetch(url)
     let content = document.getElementById('content-dashboard');
     content.innerHTML= 
         `<div> The temperature in ${city} is ${temp}°C </div>
-        <div>The wwather conditions are: ${weather}</div>`
+        <div>The weather conditions are: ${weather}</div>`
   })
   .catch(error=>{
     console.error('There was a problem fetching:', error);

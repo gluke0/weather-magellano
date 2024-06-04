@@ -32,12 +32,32 @@ fetch(url)
     console.log(`The temperature in ${city}, is ${temp}°C`);
     console.log(`The weather conditions are: ${weather}`);
 
+    // emoji related to temp
+    function getEmoji(temp){
+        if (temp <= 5){
+          return '🥶';
+        }else if(temp <= 15){
+          return '🤗';
+        }else if(temp < 30){
+          return '😁';
+        } else{
+          return '🥵';
+        }
+      }
+    let emoji = getEmoji(temp);
+
     // print in the html
     let content = document.getElementById('content-dashboard');
     content.innerHTML= 
         `<div> The temperature in <span class="city"> ${city} </span> is <span class="temp"> ${temp}°C </span> </div>
         <div>The weather conditions are: <span class="weather"> ${weather} </span></div>`
+
+    // print emoji in html
+    let interactiveContent = document.getElementById('interactive-content');
+    interactiveContent.innerHTML = `<span class="emoji">${emoji}</span>`;
   })
+
+
   .catch(error=>{
     console.error('There was a problem fetching:', error);
   });

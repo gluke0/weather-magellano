@@ -57,7 +57,6 @@ fetch(url)
     interactiveContent.innerHTML = `<span class="emoji">${emoji}</span>`;
   })
 
-
   .catch(error=>{
     console.error('There was a problem fetching:', error);
   });

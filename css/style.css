@@ -63,6 +63,10 @@ header{
     width: 22%;
 }
 
+.menu .list:first-child{
+    margin-right: 2rem;
+}
+
 .menu .list a{
     text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);

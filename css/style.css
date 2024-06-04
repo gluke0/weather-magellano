@@ -123,6 +123,15 @@ header{
     font-size: 3rem;
 }
 
+.weather-icon img{
+    width: 70%;
+}
+
+.weather-text{
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
 #interactive-content{
     width: 100%;
     height: 200px;

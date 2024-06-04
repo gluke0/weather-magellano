@@ -60,8 +60,8 @@ fetch(url)
     let content = document.getElementById('content-dashboard');
     content.innerHTML= 
         `<div><span class="temp"> ${temp}°C </span></div>
-        <div><span class="weather"> ${weather} </span></div>
-        <div><span class="weather"> <img src="${urlIcon}" alt="weather icon"> </span></div>`
+        <div><span class="weather-icon"> <img src="${urlIcon}" alt="weather icon"> </span></div>
+        <div><span class="weather-text"> ${weather} </span></div>`
 
     // print emoji in html
     let interactiveContent = document.getElementById('emoji');

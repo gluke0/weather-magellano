@@ -16,7 +16,7 @@ let datatoday = new Date()
 let key = '642e9d3043cd3d3bbd5061193d8d82c2';
 let city = 'Lodi';
 let country = 'IT';
-let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
 
 fetch(url)
@@ -36,7 +36,7 @@ fetch(url)
     if (currentTime > sunset){
         icon = icon.replace('d', 'n');
     }
-    let urlIcon = `http://openweathermap.org/img/wn/${icon}.png`;
+    let urlIcon = `https://openweathermap.org/img/wn/${icon}.png`;
     // keeping console log
     console.log(`The temperature in ${city}, is ${temp}°C`);
     console.log(`The weather conditions are: ${weather}`);

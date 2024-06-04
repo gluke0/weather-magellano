@@ -49,8 +49,8 @@ fetch(url)
     // print in the html
     let content = document.getElementById('content-dashboard');
     content.innerHTML= 
-        `<div> The temperature in <span class="city"> ${city} </span> is <span class="temp"> ${temp}°C </span> </div>
-        <div>The weather conditions are: <span class="weather"> ${weather} </span></div>`
+        `<div><span class="temp"> ${temp}°C </span></div>
+        <div><span class="weather"> ${weather} </span></div>`
 
     // print emoji in html
     let interactiveContent = document.getElementById('emoji');

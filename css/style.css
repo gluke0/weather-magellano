@@ -78,6 +78,7 @@ header a{
     margin-top: 20px;
     height: 20px;
     margin-right: 1.5rem;
+    background-color: aliceblue!important;
 }
 
 #datatoday{
@@ -91,6 +92,7 @@ header a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: aliceblue!important;
 }
 
 #content-dashboard{
@@ -132,6 +134,7 @@ header a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: aliceblue!important;
 }
 
 .settings-content{

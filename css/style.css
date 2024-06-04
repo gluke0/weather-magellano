@@ -46,6 +46,11 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    backdrop-filter: blur(2px); 
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 255, 0.143);
+    padding: 0 2rem;
 }
 
 .logo{
@@ -228,10 +233,20 @@ footer {
         width: 120px;
     }
 
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .menu .list:first-child{
+        margin-right: 0rem;
+    }
+
     .section-data{
         display: flex;
         justify-content: center;
-        margin-top: 15px;
         height: 15px;
         margin-right: 0;
     }
@@ -248,17 +263,12 @@ footer {
         flex-direction: column;
         align-items: center;
         height: auto;
+        margin-top: 2rem;
     }
 
     .logo{
         padding-left: 0;
         margin-bottom: 1rem;
-    }
-
-    .menu{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 }
 
@@ -282,10 +292,13 @@ footer {
         align-items: center;
     }
 
+    .menu .list:first-child{
+        margin-right: 0rem;
+    }
+
     .section-data{
         display: flex;
         justify-content: center;
-        margin-top: 15px;
         height: 15px;
         margin-right: 0;
     }
@@ -298,11 +311,4 @@ footer {
         padding: 4rem 0;
         font-size: large;
     }
-
-    /* footer{
-        flex-direction: column;
-        align-items: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    } */
 }

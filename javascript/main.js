@@ -18,6 +18,7 @@ let city = 'Lodi';
 let country = 'IT';
 let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
+
 fetch(url)
   .then(response=>{
     if(!response.ok){
@@ -28,9 +29,18 @@ fetch(url)
   .then(data =>{
     let temp = data.main.temp.toFixed(1);
     let weather = data.weather[0].description;
+    let icon =data.weather[0].icon;
+    let sunset = data.sys.sunset;
+    let currentTime = Math.floor(Date.now()/1000);
+
+    if (currentTime > sunset){
+        icon = icon.replace('d', 'n');
+    }
+    let urlIcon = `http://openweathermap.org/img/wn/${icon}.png`;
     // keeping console log
     console.log(`The temperature in ${city}, is ${temp}°C`);
     console.log(`The weather conditions are: ${weather}`);
+    console.log(`Url icon: ${urlIcon}`);
 
     // emoji related to temp
     function getEmoji(temp){
@@ -50,7 +60,8 @@ fetch(url)
     let content = document.getElementById('content-dashboard');
     content.innerHTML= 
         `<div><span class="temp"> ${temp}°C </span></div>
-        <div><span class="weather"> ${weather} </span></div>`
+        <div><span class="weather"> ${weather} </span></div>
+        <div><span class="weather"> <img src="${urlIcon}" alt="weather icon"> </span></div>`
 
     // print emoji in html
     let interactiveContent = document.getElementById('emoji');

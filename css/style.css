@@ -97,17 +97,33 @@ header a{
     text-align: center;
 }
 
+.city, .temp, .weather{
+    font-weight: bolder;
+    font-size: x-large;
+}
+
 #interactive-content{
     width: 100%;
     text-align: center;
     font-size: 4rem;
-    margin-top: 0rem;
     margin-top: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
-.city, .temp, .weather{
-    font-weight: bolder;
-    font-size: x-large;
+#emoji{
+    width: fit-content;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+#info-box{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.loook{
+    display: none;
 }
 
 .section-settings{

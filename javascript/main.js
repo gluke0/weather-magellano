@@ -53,10 +53,23 @@ fetch(url)
         <div>The weather conditions are: <span class="weather"> ${weather} </span></div>`
 
     // print emoji in html
-    let interactiveContent = document.getElementById('interactive-content');
+    let interactiveContent = document.getElementById('emoji');
     interactiveContent.innerHTML = `<span class="emoji">${emoji}</span>`;
   })
 
   .catch(error=>{
     console.error('There was a problem fetching:', error);
   });
+
+
+// hover for the info box
+let trigger = document.getElementById('emoji');
+let infoBox = document.getElementById('info-box');
+
+trigger.addEventListener('mouseover',()=>{
+  infoBox.classList.remove('loook');
+});
+
+trigger.addEventListener('mouseout',()=>{
+  infoBox.classList.add('loook');
+});

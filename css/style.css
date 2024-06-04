@@ -75,28 +75,28 @@ header a{
 .section-data{
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin: 1.5rem 0rem;
     height: 20px;
-    margin-right: 1.5rem;
-    background-color: aliceblue!important;
 }
 
 #datatoday{
     font-style: italic;
 }
 
-#section-dashboard{
-    height: fit-content;
-    margin: 7rem 0rem;    
+#section-dashboard{  
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: aliceblue!important;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    backdrop-filter: blur(2px); 
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 255, 0.143);
 }
 
 #content-dashboard{
     text-align: center;
+    margin-top: 4rem;
 }
 
 .city, .temp, .weather{
@@ -106,9 +106,10 @@ header a{
 
 #interactive-content{
     width: 100%;
+    height: 250px;
     text-align: center;
     font-size: 4rem;
-    margin-top: 2rem;
+    margin-top: 129px;
     display: flex;
     justify-content: center;
 }
@@ -116,12 +117,13 @@ header a{
 #emoji{
     width: fit-content;
     cursor: pointer;
-    margin-bottom: 2rem;
 }
 
 #info-box{
     font-style: italic;
     font-weight: lighter;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .loook{
@@ -134,7 +136,10 @@ header a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: aliceblue!important;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    backdrop-filter: blur(2px); 
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 255, 0.143);
 }
 
 .settings-content{
@@ -144,13 +149,19 @@ header a{
     font-size: x-large;
     padding: 10rem 0;
     border-radius: 0.8rem;
-    /* transition: font-size 0.1s ease;
-    animation: font-size-change 5s infinite; */
 }
 
-.settings-button {
+.settings-button{
     margin-bottom: 5rem;
-}
+    background-color: rgb(210, 207, 207);
+    border: none; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
 
 /* footer */
 footer {
@@ -176,25 +187,6 @@ footer {
     justify-content: center;
 }
 
-/* animation
-@keyframes font-size-change{
-    0%{
-        font-size: 0.8rem;
-    }
-    25%{
-        font-size: 1rem;
-    }
-    50%{
-        font-size: 1.2rem;
-    }
-    75%{
-        font-size: 1rem;
-    }
-    100%{
-        font-size: 0.8rem;
-    }
-} */
-
 /* media queries */
 @media (max-width: 1024px){
     .container{
@@ -213,6 +205,10 @@ footer {
         height: 15px;
         margin-right: 0;
     }
+
+    #content-dashboard, #info-box{
+        padding: 1rem 2rem;
+    } 
 
     .settings-content{
         padding: 7rem 0;
@@ -263,6 +259,10 @@ footer {
         height: 15px;
         margin-right: 0;
     }
+
+    #content-dashboard, #info-box{
+        padding: 1rem 2rem;
+    } 
 
     .settings-content{
         padding: 4rem 0;

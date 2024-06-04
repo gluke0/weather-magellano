@@ -251,9 +251,23 @@ footer {
         margin-right: 0;
     }
 
+    #city{
+        margin-top: 1rem;
+    }
+
     #content-dashboard, #info-box{
         padding: 1rem 2rem;
+        margin-top: 0.8rem;
     } 
+
+    #interactive-content{
+        margin-top: 25px;
+        height: fit-content;
+    }
+
+    #info-box{
+        margin-bottom: 1rem;
+    }
 
     .settings-content{
         padding: 7rem 0;
@@ -293,6 +307,10 @@ footer {
         align-items: center;
     }
 
+    .menu .list a{
+        font-size: 1.3rem;
+    }
+
     .menu .list:first-child{
         margin-right: 0rem;
     }
@@ -302,6 +320,10 @@ footer {
         justify-content: center;
         height: 15px;
         margin-right: 0;
+    }
+
+    #city{
+        margin-top: 1rem;
     }
 
     #content-dashboard, #info-box{

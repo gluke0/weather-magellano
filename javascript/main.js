@@ -66,6 +66,57 @@ fetch(url)
     // print emoji in html
     let interactiveContent = document.getElementById('emoji');
     interactiveContent.innerHTML = `<span class="emoji">${emoji}</span>`;
+  
+
+    // 3-days forecast
+    let urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+
+  return fetch(urlForecast);
+  })
+  .then(response =>{
+    if (!response.ok){
+      throw new Error('An error occurred ' + response.statusText);
+    }
+    return response.json();
+  })
+  .then(forecastData => {
+    let forecastContent = document.getElementById('forecast-dashboard');
+    forecastContent.innerHTML = '';
+
+    let forecastDays = {};
+    let currentDate = new Date().getDate();
+
+    forecastData.list.forEach(forecast=>{
+      let date = new Date(forecast.dt * 1000);
+      let day = date.getDate();
+      if (day !== currentDate && Object.keys(forecastDays).length < 3){
+        if (!forecastDays[day]){
+          forecastDays[day] = [];
+        }
+        forecastDays[day].push(forecast);
+      }
+    });
+
+    for (let day in forecastDays){
+      let dayForecasts = forecastDays[day];
+      let dayTempSum = 0;
+      let dayWeatherDescription = '';
+      let dayIcon = '';
+      dayForecasts.forEach(forecast=>{
+        dayTempSum += forecast.main.temp;
+        dayWeatherDescription = forecast.weather[0].description;
+        dayIcon = forecast.weather[0].icon;
+      });
+      let dayTemp = (dayTempSum / dayForecasts.length).toFixed(1);
+      let dayUrlIcon = `https://openweathermap.org/img/wn/${dayIcon}.png`;
+
+      forecastContent.innerHTML += `
+        <div class="forecast-day">
+          <div><span class="forecast-temp"> ${dayTemp}°C </span></div>
+          <div><span class="forecast-weather-icon"> <img src="${dayUrlIcon}" alt="weather icon"> </span></div>
+          <div><span class="forecast-weather-text"> ${dayWeatherDescription} </span></div>
+        </div>`;
+    }
   })
 
   .catch(error=>{

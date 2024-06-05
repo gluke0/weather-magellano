@@ -14,9 +14,9 @@ let datatoday = new Date()
 
 // weather api
 let key = '642e9d3043cd3d3bbd5061193d8d82c2';
-let city = 'Lodi';
-let country = 'IT';
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+let lat = 45.3142;
+let lon = 9.5035;
+let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
 
 
 fetch(url)

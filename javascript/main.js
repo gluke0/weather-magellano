@@ -100,11 +100,11 @@ fetch(url)
     for (let day in forecastDays){
       let dayForecasts = forecastDays[day];
       let dayTempSum = 0;
-      let dayWeatherDescription = '';
+      let dayWeather = '';
       let dayIcon = '';
       dayForecasts.forEach(forecast=>{
         dayTempSum += forecast.main.temp;
-        dayWeatherDescription = forecast.weather[0].description;
+        dayWeather = forecast.weather[0].description;
         dayIcon = forecast.weather[0].icon;
       });
       let dayTemp = (dayTempSum / dayForecasts.length).toFixed(1);
@@ -113,8 +113,9 @@ fetch(url)
       forecastContent.innerHTML += `
         <div class="forecast-day">
           <div><span class="forecast-temp"> ${dayTemp}°C </span></div>
-          <div><span class="forecast-weather-text"> ${dayWeatherDescription} </span></div>
-          <div><span class="forecast-weather-icon"> <img src="${dayUrlIcon}" alt="weather icon"> </span></div>
+          <div><span class="forecast-weather-text"> ${dayWeather} </span></div>
+          <div class="threeicon"><span class="forecast-weather-icon"> <img src="${dayUrlIcon}" alt="weather icon"> </span></div>
+          <br>
         </div>`;
     }
   })

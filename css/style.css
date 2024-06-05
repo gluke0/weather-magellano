@@ -355,6 +355,14 @@ footer {
         margin-top: 1rem;
     }
 
+    .temp{
+        font-size: 1.8rem;
+    }
+
+    .weather-icon img{
+        width: 30%;
+    }
+
     #content-dashboard, #info-box{
         padding: 1rem 2rem;
     } 

@@ -157,6 +157,9 @@ header{
     width: 55%;
 }
 
+.forecast-weather-text{
+    font-weight: lighter;
+}
 
 #interactive-content{
     width: 100%;

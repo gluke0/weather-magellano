@@ -60,8 +60,8 @@ fetch(url)
     let content = document.getElementById('content-dashboard');
     content.innerHTML= 
         `<div><span class="temp"> ${temp}°C </span></div>
-        <div><span class="weather-icon"> <img src="${urlIcon}" alt="weather icon"> </span></div>
-        <div><span class="weather-text"> ${weather} </span></div>`
+        <div><span class="weather-text"> ${weather} </span></div>
+        <div><span class="weather-icon"> <img src="${urlIcon}" alt="weather icon"> </span></div>`
 
     // print emoji in html
     let interactiveContent = document.getElementById('emoji');
@@ -113,8 +113,8 @@ fetch(url)
       forecastContent.innerHTML += `
         <div class="forecast-day">
           <div><span class="forecast-temp"> ${dayTemp}°C </span></div>
-          <div><span class="forecast-weather-icon"> <img src="${dayUrlIcon}" alt="weather icon"> </span></div>
           <div><span class="forecast-weather-text"> ${dayWeatherDescription} </span></div>
+          <div><span class="forecast-weather-icon"> <img src="${dayUrlIcon}" alt="weather icon"> </span></div>
         </div>`;
     }
   })

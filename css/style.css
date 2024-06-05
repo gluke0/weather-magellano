@@ -189,6 +189,7 @@ header{
 
 .settings-button{
     margin-bottom: 5rem;
+    color: black!important;
     background-color: rgb(210, 207, 207);
     border: none; 
     padding: 8px 16px; 

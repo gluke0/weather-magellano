@@ -336,4 +336,12 @@ footer {
         padding: 4rem 0;
         font-size: large;
     }
+    
+    #interactive-content{
+        margin-top: 5px;
+    }
+
+    #emoji{
+        font-size: 2.5rem;
+    }
 }
